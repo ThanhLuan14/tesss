@@ -1,0 +1,321 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!--Icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css.css">
+
+    <style type="text/css">
+    td {  
+        vertical-align: middle;
+        }
+         
+        @media screen and (max-width: 600px) { 
+        table#cart tbody td .form-control { 
+        width:20%; 
+        display: inline !important;
+        } 
+         
+        .actions .btn { 
+        width:36%; 
+        margin:1.5em 0;
+        } 
+         
+        .actions .btn-info { 
+        float:left;
+        } 
+         
+        .actions .btn-danger { 
+        float:right;
+        } 
+         
+        table#cart thead {
+        display: none;
+        } 
+         
+        table#cart tbody td {
+        display: block;
+        padding: .6rem;
+        min-width:320px;
+        } 
+         
+        table#cart tbody tr td:first-child {
+        background: #333;
+        color: #fff;
+        } 
+         
+        table#cart tbody td:before { 
+        content: attr(data-th);
+        font-weight: bold; 
+        display: inline-block;
+        width: 8rem;
+        } 
+         
+        table#cart tfoot td {
+        display:block;
+        } 
+        table#cart tfoot td .btn {
+        display:block;
+        }
+     
+        }
+        .thongtin{
+            grid-row: 6/7;
+            grid-column: 1/-1;
+            border: 2px solid rgb(201, 195, 195);
+            background-color:rgb(245, 235, 235);
+            border-radius: 0%;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px;
+            box-shadow: 0 5px 10px rgba(150, 174, 178, 0.8);
+            position: relative;
+            top:1350px;
+            height: 250px;
+            width: 1450px;
+        }
+        .tt1{
+            grid-row: 6/7;
+            grid-column: 1/2;
+            position: relative;
+            left: 20px;
+        }
+        .tt2{
+            grid-row: 6/7;
+            grid-column: 2/3;
+            position: relative;
+            top:-228px;
+            left: 420px;
+        }
+        .tt2 a{
+            text-decoration: none;
+            color: black;
+        }
+        .tt3{
+            grid-row: 6/7;
+            grid-column: 2/3;
+        }
+        .tt3 a{
+            text-decoration: none;
+            color: black;
+            position: relative;
+            top:-405px;
+            left: 800px;
+            font-size: 15px;
+        }
+        .tt4{
+            grid-row: 6/7;
+            grid-column: 3/4;
+        }
+        .tt4 h1{
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .tt4 a{
+            text-decoration: none;
+            color: black;
+            position: relative; top:-713px;left: 1100px;
+        }
+        .header{
+            grid-column: 1/-1;
+            background-color: red;
+            position: relative;
+            top:0px;
+            left: 0px;
+            width: 1440px;
+            padding: 1rem;
+            height: 80px;
+        }
+        .search{
+            overflow: hidden;
+            width: 400px;
+            vertical-align: middle;
+            white-space: nowrap;
+            position: relative;
+            top:-35px;
+            left: 400px;
+        }
+        .search input#search{
+            width: 400px;
+            height: 30px;
+            background: white;
+            border: none;
+            font-size: 10pt;
+            float: left;
+            color: black;
+            padding-left: 15px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        .search input#search::-webkit-input-placeholder {
+            color: #65737e;
+        }
+            
+        .search input#search:-moz-placeholder { 
+            color: #65737e;  
+        }
+            
+        .search input#search::-moz-placeholder {  
+            color: #65737e;  
+        }
+            
+        .search input#search:-ms-input-placeholder {  
+            color: #65737e;  
+        }
+        .search button.icon{
+            -webkit-border-top-right-radius: 5px;
+            -webkit-border-bottom-right-radius: 5px;
+            -moz-border-radius-topright: 5px;
+            -moz-border-radius-bottomright: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            
+            border: none;
+            background: #232833;
+            height: 30px;
+            width: 50px;
+            color: #4f5b66;
+            opacity: 0;
+            font-size: 10pt;
+            
+            -webkit-transition: all .55s ease;
+            -moz-transition: all .55s ease;
+            -ms-transition: all .55s ease;
+            -o-transition: all .55s ease;
+            transition: all .55s ease;
+        }
+        .search:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
+            outline: none;
+            opacity: 1;
+            margin-left: -50px;
+            color: white;
+        }
+        
+        .search:hover button.icon:hover{
+            background: black;
+        }
+        .lienket-tb a{
+            grid-column: 3/4;
+            text-decoration: none;
+            font-size: 15px;
+            position: relative;
+            top: -94px;
+            left: 1040px;
+            color: black;
+        }
+        .lienket-gh a{
+            grid-column: 4/5;
+            text-decoration: none;
+            font-size: 15px;
+            position: relative;
+            top:-130px;
+            left:1175px;
+            color: black;
+        }
+        .lienket-dn a{
+            grid-column: 5/-1;
+            text-decoration: none;
+            font-size: 15px;
+            position: relative;
+            left: 1310px;
+            top:-165px;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a><img src="logo.png" class="card-img-top" alt="..." style="width: 200px;height: 50px;"></a>
+        <div class="box">
+            <div class="search">
+                <input type="search" id="search" placeholder="Nhập tên điện thoại cần tìm ..." />
+                <button class="icon"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+        <i class="fa fa-bell" style="font-size:36px; position: relative; top:-80px; left:1060px;"></i>
+        <i class="fa fa-cart-plus" style="font-size:36px;position: relative; top:-80px; left:1150px;"></i>
+        <i class="fa fa-user-circle" style="font-size:36px;position: relative; top:-80px; left: 1250px;"></i>
+        <h1 class="lienket-tb"><a href="#">Thông báo</a></h1>
+        <h1 class="lienket-gh"><a href="#">Giỏ hàng</a></h1>
+        <h1 class="lienket-dn"><a href="index.html">Đăng nhập</a></h1>
+    </div>
+<div class="container"> 
+ <table id="cart" class="table table-hover table-condensed"> 
+  <thead> 
+   <tr> 
+    <th style="width:50%">Tên sản phẩm</th> 
+    <th style="width:10%">Giá</th> 
+    <th style="width:8%">Số lượng</th> 
+    <th style="width:22%" class="text-center">Thành tiền</th> 
+    <th style="width:10%"> </th> 
+   </tr> 
+  </thead> 
+  <tbody><tr> 
+   <td data-th="Product"> 
+    <div class="row"> 
+     <div class="col-sm-2 hidden-xs"><img src="sp1.png" alt="Sản phẩm 1" class="img-responsive" width="100">
+     </div> 
+     <div class="col-sm-10"> 
+      <h4 class="nomargin">Xiaomi note 11</h4> 
+      <p>Xiaomi</p> 
+     </div> 
+    </div> 
+   </td> 
+   <td data-th="Price">10.000.000 đ</td> 
+   <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+   </td> 
+   <td data-th="Subtotal" class="text-center">10.000.000 đ</td> 
+   <td class="actions" data-th="">
+    <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i>
+    </button> 
+    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>
+    </button>
+   </td> 
+  </tr> 
+  <tr> 
+   <td data-th="Product"> 
+    <div class="row"> 
+     <div class="col-sm-2 hidden-xs"><img src="sp22.png" alt="Sản phẩm 1" class="img-responsive" width="100">
+     </div> 
+     <div class="col-sm-10"> 
+      <h4 class="nomargin">SamSung Ultra 21</h4> 
+      <p>SamSung</p> 
+     </div> 
+    </div> 
+   </td> 
+   <td data-th="Price">13.000.000 đ</td> 
+   <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+   </td> 
+   <td data-th="Subtotal" class="text-center">13.000.000 đ</td> 
+   <td class="actions" data-th="">
+    <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i>
+    </button> 
+    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>
+    </button>
+   </td> 
+  </tr> 
+  </tbody><tfoot> 
+   <tr class="visible-xs"> 
+    <td class="text-center"><strong>Tổng 26.000.000 đ</strong>
+    </td> 
+   </tr> 
+   <tr> 
+    <td><a href="index.html" class="btn btn-warning"><i class="fa fa-angle-left"></i> Tiếp tục mua hàng</a>
+    </td> 
+    <td colspan="2" class="hidden-xs"> </td> 
+    <td class="hidden-xs text-center"><strong>Tổng tiền 26.000.000 đ</strong>
+    </td> 
+    <td><a href="index.html" class="btn btn-success btn-block">Thanh toán <i class="fa fa-angle-right"></i></a>
+    </td> 
+   </tr> 
+  </tfoot> 
+ </table>
+</div>
+</body>
+</html>

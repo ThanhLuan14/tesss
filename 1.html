@@ -1,0 +1,646 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css.css">
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 400px 400px 400px 400px 400px;
+            grid-template-rows: 100px 80px 80px 80px 80px 80px 80px;
+            position: relative;
+            top: 30px;
+            left: -85px;
+        }
+        .header{
+            grid-column: 1/-1;
+            background-color: red;
+            position: relative;
+            top:-30px;
+            left: 0px;
+            width: 1440px;
+            padding: 1rem;
+            height: 80px;
+        }
+    
+        .quangcao{
+            border: 1px solid white;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            grid-column: 2/4;
+            grid-row: 2/5;
+            position: relative;
+            top:-40px;
+            left: -150px;
+            box-shadow: 0 5px 10px rgba(150, 174, 178, 0.8);
+            height: 350px;
+        }
+        h1{
+            position: relative;
+            left: 50px;
+            font-size: 2rem;
+        }
+        .search{
+            overflow: hidden;
+            width: 400px;
+            vertical-align: middle;
+            white-space: nowrap;
+            position: relative;
+            top:-35px;
+            left: 400px;
+        }
+        .search input#search{
+            width: 400px;
+            height: 30px;
+            background: white;
+            border: none;
+            font-size: 10pt;
+            float: left;
+            color: black;
+            padding-left: 15px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        .search input#search::-webkit-input-placeholder {
+            color: #65737e;
+        }
+            
+        .search input#search:-moz-placeholder { 
+            color: #65737e;  
+        }
+            
+        .search input#search::-moz-placeholder {  
+            color: #65737e;  
+        }
+            
+        .search input#search:-ms-input-placeholder {  
+            color: #65737e;  
+        }
+        .search button.icon{
+            -webkit-border-top-right-radius: 5px;
+            -webkit-border-bottom-right-radius: 5px;
+            -moz-border-radius-topright: 5px;
+            -moz-border-radius-bottomright: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            
+            border: none;
+            background: #232833;
+            height: 30px;
+            width: 50px;
+            color: #4f5b66;
+            opacity: 0;
+            font-size: 10pt;
+            
+            -webkit-transition: all .55s ease;
+            -moz-transition: all .55s ease;
+            -ms-transition: all .55s ease;
+            -o-transition: all .55s ease;
+            transition: all .55s ease;
+        }
+        .search:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
+            outline: none;
+            opacity: 1;
+            margin-left: -50px;
+            color: white;
+        }
+        
+        .search:hover button.icon:hover{
+            background: black;
+        }
+        .lienket-tb a{
+            grid-column: 3/4;
+            text-decoration: none;
+            font-size: 15px;
+            position: relative;
+            top: -97px;
+            left: 990px;
+            color: black;
+        }
+        .lienket-gh a{
+            grid-column: 4/5;
+            text-decoration: none;
+            font-size: 15px;
+            position: relative;
+            top:-143px;
+            left:1130px;
+            color: black;
+        }
+        .lienket-dn a{
+            grid-column: 5/-1;
+            text-decoration: none;
+            font-size: 15px;
+            position: relative;
+            left: 1260px;
+            top:-190px;
+            color: black;
+        }
+
+        
+    
+   
+        .thongtin{
+            grid-row: 6/7;
+            grid-column: 1/-1;
+            border: 2px solid rgb(201, 195, 195);
+            background-color:white;
+            border-radius: 0%;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px;
+            box-shadow: 0 5px 10px rgba(150, 174, 178, 0.8);
+            position: relative;
+            top:800px;
+            left: 100px;
+            height: 250px;
+            width: 1450px;
+        }
+        .tt1{
+            grid-row: 6/7;
+            grid-column: 1/2;
+            position: relative;
+            left: 20px;
+        }
+        .tt2{
+            grid-row: 6/7;
+            grid-column: 2/3;
+            position: relative;
+            top:-228px;
+            left: 420px;
+        }
+        .tt2 a{
+            text-decoration: none;
+            color: black;
+        }
+        .tt3{
+            grid-row: 6/7;
+            grid-column: 2/3;
+        }
+        .tt3 a{
+            text-decoration: none;
+            color: black;
+            position: relative;
+            top:-405px;
+            left: 800px;
+            font-size: 15px;
+        }
+        .tt4{
+            grid-row: 6/7;
+            grid-column: 3/4;
+        }
+        .tt4 h1{
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .tt4 a{
+            text-decoration: none;
+            color: black;
+            position: relative; top:-713px;left: 1100px;
+        }
+        .quangcao
+        {
+            position: relative;
+            top: 50px;
+            left: -400px;
+            background-color: pink;
+        }
+        .khuvuc
+        {
+            border-radius: 5px crimson;
+            background-color:wheat;grid-row: 6/7;
+            grid-column: 1/-1;
+            border: 2px solid white;
+            background-color:white;
+            border-radius: 10%;
+            -moz-border-radius: 10;
+            -webkit-border-radius:10px;
+            box-shadow: 0 0px 0px rgba(224, 231, 233, 0.8);
+            height: 430px; 
+            width: 400px;
+            position: relative;
+            left: 1050px;
+            top:-280px;
+        }
+        .uudai1{
+            grid-column: 4/5;
+            grid-row: 2/3;
+            border: 2px solid rgb(201, 195, 195);
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(150, 174, 178, 0.8);
+            position: relative;
+            top: 505px;
+            left: -150px;
+            width: 400px;
+            height: 300px;
+        }
+        .thongtinsp{
+            grid-column: 4/5;
+            grid-row: 2/3;
+            border: 2px solid rgb(201, 195, 195);
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(150, 174, 178, 0.8);
+            position: relative;
+            top:1000px;
+            left: -700px;
+            width: 500px;
+            height: 300px;
+           
+        }
+        .khuyenmai
+        {
+            grid-column: 4/5;
+            grid-row: 2/3;
+            border: 0.5px solid rgb(220, 76, 76);
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            box-shadow: 0 5px 10px white;
+            position: relative; top: 300px ;
+            left: -1100px;
+            width: 500px; height: 200px;
+        }
+        .tragop
+        {
+            position: relative;
+            top: 480px;
+            left: 500px;
+            width: 600px;
+        }
+        .uudaithem
+        {
+            grid-column: 4/5;
+            grid-row: 2/3;
+            border: 2px solid rgb(201, 195, 300);
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            box-shadow: 0 200px 200px rgba(150, 174, 178, 0.8);
+            position: relative;
+            top: 700px;
+            left:-700px;
+            width: 500px;
+            height: 250px;
+        }
+       .name_uudai
+       {
+        height:40px ;
+        width: 500px;
+        background-color: #c1c9ce;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+
+       }
+       .new1
+       {
+        height:40px ;
+        width: 500px;
+        background-color: #e3c0c0;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+       }
+       .thamkhao
+       {
+        position: relative;
+        top: 150px;
+        left: 20px;
+       }
+       .gia_sp
+       {
+        height:40px ;
+        width: 500px;
+        background-color: #e3c0c0;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        position: relative;
+        top: 70px;
+        left: -1100px;
+       }
+       .gh_sp
+       {
+           position: relative;
+           top: -25px;
+           left: 200px;
+           height: 100px;
+           width: 200px;
+       }
+       .ban_sp
+       {
+           position: relative;
+           top: 5px;
+       }
+       .quanity
+       {
+           position: relative;
+           top: 15px;
+       }
+       .img
+       {
+           position: relative;
+           top: -20px;
+           left:505px;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html"><img src="logo.jpg" class="card-img-top" alt="..." style="width: 200px;height: 50px;"></a>
+            <div class="box">
+                <div class="search">
+                    <input type="search" id="search" placeholder="Nhập tên điện thoại cần tìm ..." />
+                    <button class="icon"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+            <i class="fa fa-bell" style="font-size:36px; position: relative; top:-80px; left:1060px;"></i>
+            <i class="fa fa-cart-plus" style="font-size:36px;position: relative; top:-80px; left:1150px;"></i>
+            <i class="fa fa-user-circle" style="font-size:36px;position: relative; top:-80px; left: 1250px;"></i>
+            <h1 class="lienket-tb"><a href="#">Thông báo</a></h1>
+            <h1 class="lienket-gh"><a href="#">Giỏ hàng</a></h1>
+            <h1 class="lienket-dn"><a href="index.html">Đăng nhập</a></h1>
+        </div>
+        <div class="product-breadcroumb">
+            <a  style ="color: black;"href="#">Trang chủ ></a>
+            <a style ="color: black;"href="#">Chi tiết sản phẩm ></a>
+            <a style ="color: black;"href="#">Xiaomi Redmi  Note 11 </a>
+            <div class="img">
+                <a><img src="danhgia5sao.png" style="width:100px;height:30px">1 đánhh giá</a>
+            </div>
+           
+        </div>
+        
+        <div  style="width: 400px; height: 500px ;"class="quangcao">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div style ="position: relative; top: 40px;"class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="dt5.jpg" class="d-block w-200" alt="..." width="100%" style="width:400px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="dt5_2.jpg" class="d-block w-200" alt="..." width="100%"style="width:400px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="dt5_3.jpg" class="d-block w-200" alt="..." width="100%"style="width:400px">
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="thamkhao">
+                <img src="dt5.jpg" width="100px">
+                <img src="dt5_2.jpg" width="100px">
+                <img src="dt5_3.jpg" width="100px">
+            </div>
+        </div>
+      
+        
+        
+        
+          <div class="uudai1">
+            <div class="new11">
+                <p style="font-size: 20px;">Thông tin sản phẩm</p>
+              </div>
+                <div class="new2">
+                   
+                    <ul>
+                        <li><a> 
+                            <img src="tt1.png" width="30">
+                            Mới, đầy đủ phụ kiện từ nhà sản xuất</a></li>
+                        <li>
+                            <a > 
+                                <img src="tt2.png" width="40">
+                                Máy, Sách hướng dẫn, Cây lấy sim, Ốp lưng, Cáp Type C, Củ sạc nhanh rời đầu Type A 33W</a>
+                        </li>
+                        <li>
+                            <a> 
+                                <img src="tt3.png" width="40">
+                                Bảo hành 18 tháng tại trung tâm bảo hành Chính hãng. 1 đổi 1 trong 30 ngày nếu có lỗi phần cứng từ nhà sản xuất.<a  style ="color: red;"href="https://cellphones.com.vn/chinh-sach-bao-hanh">Xem chi tiết</a>
+                                </a>
+                        </li>
+                        
+                    </ul>
+                      
+                    
+                </div>
+        </div>
+        <div class ="khuvuc">
+            <div class="box-sreach">
+                <a style="font-size:20px ;"><img src="dc1.jpg" width="40px">Khu vực bán hàng</a>
+                <select id="product" class="form-control" onchange="Window.location.href=this.value;"> 
+                    <option >Miền Nam</option>
+                    <option>Miền Bắc</option>
+                </select>
+                <div class="break"></div>
+                <select id="province_filter" class="form-control">
+                    <option data-store value>Tỉnh/Thành</option>
+                    <option id="nc1" data-store="7" value="1">Hồ Chí Minh</option>
+                    <option id="nc4" data-store="7" value="4">Bình Dương</option>
+                    <option id="nc5" data-store="7" value="5">Đồng Nai</option>
+                    <option id="nc8" data-store="7" value="8">Long An</option>
+                    <option id="nc10" data-store="7" value="10">Vũng Tàu</option>
+                    <option id="nc37" data-store="7" value="37">Bến Tre</option>
+                </select>
+                <select id="district_filter" class="form-control">
+                    <option data-store value>Quận/Huyện</option>
+                    <option id="ct_1" data-province="1" value="1">Huyện Bình Chánh</option>
+                    <option id="ct_2" data-province="1" value="2">Quận Tân Bình</option>
+                    <option id="ct_3" data-province="1" value="3">Quận Bình Thạnh</option>
+                    <option id="ct_5" data-province="1" value="5">Huyện Củ Chi</option>
+                    <option id="ct_6" data-province="1" value="6">Quận Gò Vấp</option>
+                    <option id="ct_7" data-province="1" value="7">Huyện Hóc Môn</option>
+                    <option id="ct_9" data-province="1" value="9">Quận Phú Nhuận</option>
+                    <option id="ct_10" data-province="1" value="10">Quận 1</option>
+                    <option id="ct_11" data-province="1" value="11">Quận 10</option>
+                    <option id="ct_12" data-province="1" value="12">Quận 12</option>
+                    <option id="ct_13" data-province="1" value="13">Quận 2</option>
+                    <option id="ct_14" data-province="1" value="14">Quận 4</option>
+                    <option id="ct_16" data-province="1" value="16">Quận 6</option>
+                    <option id="ct_18" data-province="1" value="18">Quận 7</option>
+                    <option id="ct_19" data-province="1" value="19">Quận 8</option>
+                    <option id="ct_20" data-province="1" value="20">Quận 9</option>
+                    <option id="ct_21" data-province="1" value="21">Quận 11</option>
+                    <option id="ct_22" data-province="1" value="22">Quận Tân Phú</option>
+                    <option id="ct_23" data-province="1" value="23">Thành Phố THủ Đức</option>
+                    <option id="ct_24" data-province="1" value="24">Quận Tân Bình</option>
+                    <option id="ct_66" data-province="4" value="66">Thị Xã Thủ Dầu Một</option>
+                    <option id="ct_69" data-province="4" value="69">TX Dĩ An</option>
+                    <option id="ct_71" data-province="5" value="71">Long Khánh</option>
+                    <option id="ct_74" data-province="5" value="74">Biên Hòa</option>
+                    <option id="ct_106" data-province="8" value="106">TP Tân An</option>
+                    <option id="ct_114" data-province="8" value="114">Bến Lức</option>
+                    <option id="ct_145" data-province="10" value="145">Vũng Tàu</option>
+                    <option id="ct_460" data-province="37" value="460">Bến Tre</option>
+                </select>
+                </div>
+                <div class="lhkhuvuc">
+                    <a style="font-size:20px ;"> <img src="store.jpg" width="70px">Có 5 Địa chỉ bán trực tiếp:</a>
+                    <ul>
+                        <li><a href="https://www.google.com" style="color: red;"><img src="dtban2.jpg" width="30px">03339772394</a>888 Tỉnh Lộ 10, P. Bình Trị Đông A, Q. Bình Tân</li>
+                        <li><a href="https://www.google.com" style="color: red;"><img src="dtban2.jpg" width="30px">03339772394</a>03339772394</a>386 Hương Lộ 2, P. Bình Trị Đông, Q. Bình Tân (Ngã Tư Bốn Xã)</li>
+                        <li><a href="https://www.google.com" style="color: red;"><img src="dtban2.jpg" width="30px">03339772394</a>03339772394</a>229 Nguyễn Thị Tú, P. Bình Hưng Hoà B, Q. Bình Tân</li>
+                        <li><a href="https://www.google.com" style="color: red;"><img src="dtban2.jpg" width="30px">03339772394</a>03339772394</a>536 Xô Viết Nghệ Tĩnh, P. 25, Q. Bình Thạnh</li>
+                        <li><a href="https://www.google.com" style="color: red;"><img src="dtban2.jpg" width="30px">03339772394</a>03339772394</a>377-379 Điện Biên Phủ, P. 25, Q. Bình Thạnh</li>
+                    </ul>
+                </div>
+            </div>
+           
+          <div class="phangiua">
+              <div class="gia_sp">
+                    <h2 class="ten_sp"> <l>Xiaomi Redmi Note 11</l></h2>
+                    <div class="ban_sp">
+                        <b style="color:red ;">4.190.000</b><ins style="color:red;"><sup>đ</sup></ins>
+                        <del>4.600.000 <ins><sup>đ</sup></ins></del>
+                    </div>
+                    <form action class="cart">
+                        <div class="quanity">
+                            <input type="number" size="4" class="input-text" title="Qty" value="1" name="quanitty" min="1" step="1">
+                        </div>
+                        <div class="gh_sp">
+                            <button type="button" class="btn btn-info"><a><img src="gh1.png" width="30px"> &nbsp Thêm vào giỏ hàng</a></button>
+                        </div>
+                        <a>Danh mục: <a href="https://cellphones.com.vn/xiaomi-redmi-note-11.html">Sale</a>, Thể loại:<a href="https://cellphones.com.vn/xiaomi-redmi-note-11.html">Smart phone</a></a>
+                        
+                    </form>
+              </div>
+              <div class="khuyenmai">
+                    <div class="new1">
+                        <p style="font-size: 20px;"><img src="qua.png" width="30px"> &nbsp Khuyến mãi</p>
+                    </div>
+                        <div class="new2">
+                            <ul>
+                                <li><a> 
+                                    <img src="so1.jpg" width="30">
+                                    [HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ </a>
+                                    <a href="https://cellphones.com.vn/thu-cu-doi-moi" style="color:red;">Xem chi tiết.</a>
+                                </li>
+                                <li>
+                                    <a > 
+                                        <img src="so2.jpg" width="30">
+                                        Nhập mã CPSONL500 - Giảm thêm 500k khi thanh toán qua VNPay trên website hoặc CPS500 qua QR Offline tại cửa hàng <a href="https://cellphones.com.vn/uu-dai-500k-thanh-toan-qua-vnpay" style="color:red ;">Xem chi tiết.</a> </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+              <div class="tragop">
+                    <button type="button" class="btn btn-danger" style="width:500px">
+                        <strong>MUA NGAY</br></strong>
+                        <span>(Giao hàng tận nơi hoặc lấy tại cửa hàng)</span>
+                    </button>
+                    <button type="button" class="btn btn-primary" style="width:250px">
+                        <strong>TRẢ GÓP 0% &nbsp &nbsp &nbsp &nbsp</br></strong>
+                        <span>(Xét duyệt qua điện thoại)</span>
+                    </button>
+                    <button type="button" class="btn btn-primary"style="width:250px" >
+                        <strong>TRẢ GÓP QUA THẺ</br></strong>
+                        <span>(Visa,Master,Card,JCB)</span>
+                    </button>
+              </div>
+
+              <div class="uudaithem">
+                  <div class="name_uudai">
+                      <a> <b>ƯU ĐÃI THÊM</b></a>
+                  </div>
+                  <div class="list_udthem">
+                        <ul>
+                            <li><a  style ="color: black;"href="https://cellphones.com.vn/xiaomi-redmi-note-11-128gb.html" target="_blank"> 
+                                <img src="ud1.png" width="40">
+                                Nhập mã KVCPS - Giảm thêm 5% (tối đa 250.000đ) khi thanh toán qua Kredivo cho đơn hàng từ 500.000đ</a></li>
+                            <li>
+                                <a style ="color: black;"href="https://cellphones.com.vn/xiaomi-redmi-note-11-128gb.html" target="_blank"> 
+                                    <img src="ud2.png" width="40">
+                                    Nhập QRCPS giảm đến 300.000đ áp dụng các đơn hàng từ 4 triệu trở lên khi thanh toán qua VNPAY tại cửa hàng</a>
+                            </li>
+                            <li>
+                                <a style ="color: black;"href="https://cellphones.com.vn/xiaomi-redmi-note-11-128gb.html" target="_blank"> 
+                                    <img src="ud3.png" width="40">
+                                    Moca Nhập MOCACPS - Giảm thêm 5% (tối đa 400.000đ) khi thanh toán qua ví Moca cho đơn hàng từ 500.000đ</a>
+                            </li>
+                            <li>
+                                <a style ="color: black;"href="https://cellphones.com.vn/xiaomi-redmi-note-11-128gb.html" target="_blank"> 
+                                    <img src="ud4.png" width="40">
+                                    Giảm thêm 500.000đ khi thanh toán qua thẻ tín dụng VP Bank cho đơn hàng từ 10 triệu</a>
+                            </li>
+                        </ul>
+                  </div>
+              </div>
+
+          </div>
+   
+
+        <div class="thongtin">
+            <div class="tt1">
+                <h1 style="font-size: 20px;">Tìm cửa hàng</h1>
+                <h1><a href="#" style="text-decoration: none;color: black;font-size: 15px;position: relative;top:-15px;">Tìm cửa hàng gần nhất</a></h1>
+                <h1><a href="#" style="text-decoration: none;color: black;font-size: 15px;position: relative;top:-35px;">Mua hàng từ xa</a></h1>
+                <h1><a href="#" style="text-decoration: none;color:red;font-size: 15px;position: relative;top:-60px;">Gặp trực tiếp cửa hàng gần nhất (Zalo hoặc gọi điện)</a></h1>
+                <h1 style="font-size: 20px;position: relative;top:-60px;">Phương thức thanh toán</h1>
+                <a href="#"><img src="thanhtoan1.png" class="card-img-top" alt="..." style="width: 100px;height: 30px;position: relative;top:-60px;left: 50px;border: 1px solid black;border-radius: 10px;"></a>
+                <a href="#"><img src="thanhtoan2.png" class="card-img-top" alt="..." style="width: 100px;height: 30px;position: relative;top:-60px;left: 50px;border: 1px solid black;border-radius: 10px;"></a>
+                <a href="#"><img src="thanhtoan3.png" class="card-img-top" alt="..." style="width: 100px;height: 30px;position: relative;top:-20px;left: -160px;border: 1px solid black;border-radius: 10px;"></a>
+                <a href="#"><img src="thanhtoan4.png" class="card-img-top" alt="..." style="width: 100px;height: 30px;position: relative;top:-20px;left: -160px;border: 1px solid black;border-radius: 10px;"></a>
+            </div>
+            <div class="tt2">
+                <h1 style="font-size: 15px;">Gọi mua hàng:<a href="#"> 1800.2097 </a>(8h00 - 22h00)</h1>
+                <h1 style="font-size: 15px;">Gọi khiếu nại:<a href="#"> 1800.2063 </a>(8h00 - 21h00)</h1>
+                <h1 style="font-size: 15px;">Gọi bảo hành:<a href="#"> 1800.2064 </a>(8h00 - 21h00)</h1>
+                <h1 style="font-size: 20px;">Đối tác dịch vụ bảo hành</h1>
+                <a href="#"><img src="doitacbaohanh.png" class="card-img-top" alt="..." style="width: 200px;height: 50px;position: relative;left: 50px;"></a>
+            </div>
+            <div class="tt3">
+                <h1><a href="#" style="color: red">Tìm cửa hàng gần nhất</a></h1>
+                <h1><a href="#" style="position: absolute;top:-410px; ;">Tìm cửa hàng gần nhất</a></h1>
+                <h1><a href="#" style="position: relative;top:-405px;">Mua hàng trả góp Online</a></h1>
+                <h1><a href="#" style="position: relative;top:-430px;">Tra điểm Smember</a></h1>
+                <h1><a href="#" style="position: relative;top:-455px;">Tra cứu hoá đơn VAT điện tử</a></h1>
+                <h1><a href="#" style="position: relative;top:-480px;">Trung tâm bảo hành chính hãng</a></h1>
+                <h1><a href="#" style="position: relative;top:-505px;">Quy định về việc sao lưu dữ liệu</a></h1>
+                <h1><a href="#" style="position: relative;top:-530px;color: red;">Dịch vụ bảo hành điện thoại</a></h1>
+            </div>
+            <div class="tt4">
+                <h1><a href="#" style="color: red;">Tìm cửa hàng gần nhất</a></h1>
+                <h1><a href="#" >Tìm cửa hàng gần nhất</a></h1>
+                <h1><a href="#" >Mua hàng trả góp Online</a></h1>
+                <h1><a href="#" >Tra điểm Smember</a></h1>
+                <h1><a href="#" >Tra cứu hoá đơn VAT điện tử</a></h1>
+                <h1><a href="#" style="color: red;">Trung tâm bảo hành chính hãng</a></h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
